@@ -13,7 +13,7 @@ util.inherits(QRAR, events.EventEmitter);
 
 QRAR.prototype.start = function () {
   var self = this;
-  var images = this.client.createPngStream();
+  var images = this.client.getPngStream();
   var decoder = new QRcodes(images);
 
   decoder.on('qrcode', function (code) {
